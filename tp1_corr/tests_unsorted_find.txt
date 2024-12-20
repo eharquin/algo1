@@ -1,0 +1,70 @@
+
+# <test id> <test function>
+test_fu1 verify_find_unsorted 
+[1, 4, 3, 2, 5]           # [array]
+5                         # size
+2                         # elt
+1                         # expected result of find
+
+#
+test_fu2 verify_find_unsorted
+[1, 4, 3, 2, 5]
+5
+1
+1
+
+#
+test_fu3 verify_find_unsorted
+[1, 4, 3, 2, 5]
+5
+5
+1
+
+#
+test_fu4 verify_find_unsorted
+[1, 4, 3, 2, 5]
+5
+-2
+0
+
+#
+# 5 is located just after the array (size = 4)
+#
+test_fu5 verify_find_unsorted
+[1, 4, 3, 2, 5]
+4
+5
+0
+
+#
+test_fu6 verify_find_unsorted
+[1]
+1
+1
+1
+
+#
+# Empty array
+#
+test_fu7 verify_find_unsorted
+[]
+0
+2
+0
+
+#
+# Empty array, search for 0
+#
+test_fu8 verify_find_unsorted
+[]
+0
+0
+0
+
+#
+test_fu9 verify_find_unsorted_multi
+[9, 7, 5, 3, -5, 99999]
+6
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -4, -5, 99999]
+[0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1]
+

@@ -1,0 +1,32 @@
+
+# <test id> <test function>
+test_iu1 verify_insert_unsorted 
+[3, 4, 5]                   # [array]
+3                           # size
+42                          # elt
+[3, 4, 5, 42]               # [expected result of insert]
+4                           # expected size after insert
+
+#
+test_iu2 verify_insert_unsorted
+[3]
+1
+42
+[3, 42]
+2
+
+#
+test_iu3 verify_insert_unsorted
+[]
+0
+42
+[42]
+1
+
+#
+test_iu4 verify_insert_unsorted_multi
+[]
+0
+[10, 8, 6, 4, 2, 9, 7, 5, 3, 1]
+[10, 8, 6, 4, 2, 9, 7, 5, 3, 1]
+10

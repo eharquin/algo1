@@ -1,0 +1,80 @@
+
+# <test id> <test function>
+test_is1 verify_insert_sorted 
+[2, 5, 7]                 # [array]
+3                         # size
+4                         # elt
+[2, 4, 5, 7]              # [expected result of insert]
+4                         # expected size after insert
+
+#
+test_is2 verify_insert_sorted
+[2, 5, 7]
+3
+6
+[2, 5, 6, 7]
+4
+
+#
+test_is3 verify_insert_sorted
+[2, 5, 7]
+3
+9
+[2, 5, 7, 9]
+4
+
+#
+test_is4 verify_insert_sorted
+[2, 5, 7]
+3
+1
+[1, 2, 5, 7]
+4
+
+#
+test_is5 verify_insert_sorted
+[2, 5, 7]
+3
+5
+[2, 5, 5, 7]
+4
+
+#
+test_is6 verify_insert_sorted
+[]
+0
+1
+[1]
+1
+
+#
+test_is7 verify_insert_sorted
+[2]
+1
+1
+[1, 2]
+2
+
+#
+test_is8 verify_insert_sorted
+[2, 5, 7]
+3
+2
+[2, 2, 5, 7]
+4
+
+#
+test_is9 verify_insert_sorted
+[2, 5, 7]
+3
+-1
+[-1, 2, 5, 7]
+4
+
+#
+test_is10 verify_insert_sorted_multi
+[]
+0
+[13, 6, 12, 17, 16, 4, 3, 10, 2, 20, 11, 19, 5, 14, 7, 18, 9, 8, 1, 15]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+20
